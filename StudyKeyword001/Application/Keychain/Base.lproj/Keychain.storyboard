@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Keychain View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="KeychainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="KeychainViewController" customModule="StudyKeyword001" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-YY-n1I">
+                                <rect key="frame" x="20" y="184.5" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-px-r8Y">
+                                <rect key="frame" x="94" y="318.5" width="187" height="30"/>
+                                <state key="normal" title="Save Password to Keychain"/>
+                                <connections>
+                                    <action selector="savePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGA-Nq-xnM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-vZ-he6">
+                                <rect key="frame" x="73.5" y="398.5" width="228" height="30"/>
+                                <state key="normal" title="Retrieve Password from Keychain"/>
+                                <connections>
+                                    <action selector="retrievePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBq-dz-NTk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgo-x7-3Rz">
+                                <rect key="frame" x="74" y="478.5" width="227" height="30"/>
+                                <state key="normal" title="Remove Password from Keychain"/>
+                                <connections>
+                                    <action selector="removePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZh-7k-UaZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5EN-px-r8Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="01I-3e-fvb"/>
+                            <constraint firstItem="5EN-px-r8Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3oR-EX-pf2"/>
+                            <constraint firstItem="Vgo-x7-3Rz" firstAttribute="top" secondItem="JHg-vZ-he6" secondAttribute="bottom" constant="50" id="BoB-kC-ToH"/>
+                            <constraint firstItem="JHg-vZ-he6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ewm-hJ-XoD"/>
+                            <constraint firstItem="JHg-vZ-he6" firstAttribute="top" secondItem="5EN-px-r8Y" secondAttribute="bottom" constant="50" id="HHf-O3-pcd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LdE-YY-n1I" secondAttribute="trailing" constant="20" id="Sul-uB-LiA"/>
+                            <constraint firstItem="5EN-px-r8Y" firstAttribute="top" secondItem="LdE-YY-n1I" secondAttribute="bottom" constant="100" id="YUE-AU-OAY"/>
+                            <constraint firstItem="Vgo-x7-3Rz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qOT-w0-Vs8"/>
+                            <constraint firstItem="LdE-YY-n1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uqc-aV-xqU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordText" destination="LdE-YY-n1I" id="Z0T-uV-2Ld"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

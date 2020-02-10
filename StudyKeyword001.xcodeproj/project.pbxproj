@@ -3,15 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7659945B23F0E35800FFEF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7659945A23F0E35800FFEF9F /* Main.storyboard */; };
+		7659945D23F0E3C000FFEF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659945C23F0E3C000FFEF9F /* MainViewController.swift */; };
 		76F206CF23F0D36100648933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206CE23F0D36100648933 /* AppDelegate.swift */; };
 		76F206D123F0D36100648933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D023F0D36100648933 /* SceneDelegate.swift */; };
-		76F206D323F0D36100648933 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D223F0D36100648933 /* ViewController.swift */; };
-		76F206D623F0D36100648933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F206D423F0D36100648933 /* Main.storyboard */; };
-		76F206D923F0D36100648933 /* StudyKeyword001.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D723F0D36100648933 /* StudyKeyword001.xcdatamodeld */; };
+		76F206D323F0D36100648933 /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D223F0D36100648933 /* KeychainViewController.swift */; };
+		76F206D623F0D36100648933 /* Keychain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F206D423F0D36100648933 /* Keychain.storyboard */; };
 		76F206DB23F0D36300648933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F206DA23F0D36300648933 /* Assets.xcassets */; };
 		76F206DE23F0D36300648933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F206DC23F0D36300648933 /* LaunchScreen.storyboard */; };
 		B4A55620E9C11B8441710B24 /* Pods_StudyKeyword001.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3C64F8D5376236D1D60F32 /* Pods_StudyKeyword001.framework */; };
@@ -19,12 +20,13 @@
 
 /* Begin PBXFileReference section */
 		3D8C2E12FF4F9E885F3887C1 /* Pods-StudyKeyword001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyKeyword001.release.xcconfig"; path = "Target Support Files/Pods-StudyKeyword001/Pods-StudyKeyword001.release.xcconfig"; sourceTree = "<group>"; };
+		7659945A23F0E35800FFEF9F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7659945C23F0E3C000FFEF9F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76F206CB23F0D36100648933 /* StudyKeyword001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyKeyword001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F206CE23F0D36100648933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F206D023F0D36100648933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76F206D223F0D36100648933 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76F206D523F0D36100648933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76F206D823F0D36100648933 /* StudyKeyword001.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyKeyword001.xcdatamodel; sourceTree = "<group>"; };
+		76F206D223F0D36100648933 /* KeychainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainViewController.swift; sourceTree = "<group>"; };
+		76F206D523F0D36100648933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Keychain.storyboard; sourceTree = "<group>"; };
 		76F206DA23F0D36300648933 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F206DD23F0D36300648933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76F206DF23F0D36300648933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +46,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7659945423F0E26900FFEF9F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				76F206CE23F0D36100648933 /* AppDelegate.swift */,
+				76F206D023F0D36100648933 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7659945523F0E27800FFEF9F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				76F206DA23F0D36300648933 /* Assets.xcassets */,
+				76F206DF23F0D36300648933 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7659945623F0E28B00FFEF9F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				76F206DC23F0D36300648933 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		7659945723F0E29700FFEF9F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7659945923F0E34E00FFEF9F /* Main */,
+				7659945823F0E2A000FFEF9F /* Keychain */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7659945823F0E2A000FFEF9F /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				76F206D423F0D36100648933 /* Keychain.storyboard */,
+				76F206D223F0D36100648933 /* KeychainViewController.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		7659945923F0E34E00FFEF9F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7659945A23F0E35800FFEF9F /* Main.storyboard */,
+				7659945C23F0E3C000FFEF9F /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		76F206C223F0D36100648933 = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +120,10 @@
 		76F206CD23F0D36100648933 /* StudyKeyword001 */ = {
 			isa = PBXGroup;
 			children = (
-				76F206CE23F0D36100648933 /* AppDelegate.swift */,
-				76F206D023F0D36100648933 /* SceneDelegate.swift */,
-				76F206D223F0D36100648933 /* ViewController.swift */,
-				76F206D423F0D36100648933 /* Main.storyboard */,
-				76F206DA23F0D36300648933 /* Assets.xcassets */,
-				76F206DC23F0D36300648933 /* LaunchScreen.storyboard */,
-				76F206DF23F0D36300648933 /* Info.plist */,
-				76F206D723F0D36100648933 /* StudyKeyword001.xcdatamodeld */,
+				7659945723F0E29700FFEF9F /* Application */,
+				7659945623F0E28B00FFEF9F /* Launch */,
+				7659945523F0E27800FFEF9F /* Resource */,
+				7659945423F0E26900FFEF9F /* AppDelegate */,
 			);
 			path = StudyKeyword001;
 			sourceTree = "<group>";
@@ -83,7 +134,6 @@
 				E1337AE005F6CD4A8F13AF6B /* Pods-StudyKeyword001.debug.xcconfig */,
 				3D8C2E12FF4F9E885F3887C1 /* Pods-StudyKeyword001.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,7 +207,8 @@
 			files = (
 				76F206DE23F0D36300648933 /* LaunchScreen.storyboard in Resources */,
 				76F206DB23F0D36300648933 /* Assets.xcassets in Resources */,
-				76F206D623F0D36100648933 /* Main.storyboard in Resources */,
+				76F206D623F0D36100648933 /* Keychain.storyboard in Resources */,
+				7659945B23F0E35800FFEF9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,22 +261,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F206D323F0D36100648933 /* ViewController.swift in Sources */,
+				76F206D323F0D36100648933 /* KeychainViewController.swift in Sources */,
 				76F206CF23F0D36100648933 /* AppDelegate.swift in Sources */,
 				76F206D123F0D36100648933 /* SceneDelegate.swift in Sources */,
-				76F206D923F0D36100648933 /* StudyKeyword001.xcdatamodeld in Sources */,
+				7659945D23F0E3C000FFEF9F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		76F206D423F0D36100648933 /* Main.storyboard */ = {
+		76F206D423F0D36100648933 /* Keychain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				76F206D523F0D36100648933 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Keychain.storyboard;
 			sourceTree = "<group>";
 		};
 		76F206DC23F0D36300648933 /* LaunchScreen.storyboard */ = {
@@ -360,7 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 994BWAVX9G;
-				INFOPLIST_FILE = StudyKeyword001/Info.plist;
+				INFOPLIST_FILE = StudyKeyword001/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,7 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 994BWAVX9G;
-				INFOPLIST_FILE = StudyKeyword001/Info.plist;
+				INFOPLIST_FILE = StudyKeyword001/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -415,19 +466,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		76F206D723F0D36100648933 /* StudyKeyword001.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				76F206D823F0D36100648933 /* StudyKeyword001.xcdatamodel */,
-			);
-			currentVersion = 76F206D823F0D36100648933 /* StudyKeyword001.xcdatamodel */;
-			path = StudyKeyword001.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 76F206C323F0D36100648933 /* Project object */;
 }
