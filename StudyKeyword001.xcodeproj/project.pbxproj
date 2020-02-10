@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7659945B23F0E35800FFEF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7659945A23F0E35800FFEF9F /* Main.storyboard */; };
 		7659945D23F0E3C000FFEF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659945C23F0E3C000FFEF9F /* MainViewController.swift */; };
+		7659946423F0F46400FFEF9F /* CoreData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7659946323F0F46400FFEF9F /* CoreData.storyboard */; };
+		7659946623F0F49500FFEF9F /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659946523F0F49500FFEF9F /* CoreDataViewController.swift */; };
+		7659946823F0F4A200FFEF9F /* UserDefaults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7659946723F0F4A200FFEF9F /* UserDefaults.storyboard */; };
+		7659946A23F0F4AC00FFEF9F /* UserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659946923F0F4AC00FFEF9F /* UserDefaultsViewController.swift */; };
+		7659949C23F154CB00FFEF9F /* StudyKeyword001.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7659949A23F154CB00FFEF9F /* StudyKeyword001.xcdatamodeld */; };
 		76F206CF23F0D36100648933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206CE23F0D36100648933 /* AppDelegate.swift */; };
 		76F206D123F0D36100648933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D023F0D36100648933 /* SceneDelegate.swift */; };
 		76F206D323F0D36100648933 /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D223F0D36100648933 /* KeychainViewController.swift */; };
@@ -22,6 +27,11 @@
 		3D8C2E12FF4F9E885F3887C1 /* Pods-StudyKeyword001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyKeyword001.release.xcconfig"; path = "Target Support Files/Pods-StudyKeyword001/Pods-StudyKeyword001.release.xcconfig"; sourceTree = "<group>"; };
 		7659945A23F0E35800FFEF9F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7659945C23F0E3C000FFEF9F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7659946323F0F46400FFEF9F /* CoreData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreData.storyboard; sourceTree = "<group>"; };
+		7659946523F0F49500FFEF9F /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		7659946723F0F4A200FFEF9F /* UserDefaults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDefaults.storyboard; sourceTree = "<group>"; };
+		7659946923F0F4AC00FFEF9F /* UserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewController.swift; sourceTree = "<group>"; };
+		7659949B23F154CB00FFEF9F /* StudyKeyword001.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyKeyword001.xcdatamodel; sourceTree = "<group>"; };
 		76F206CB23F0D36100648933 /* StudyKeyword001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyKeyword001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F206CE23F0D36100648933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F206D023F0D36100648933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,8 +85,11 @@
 		7659945723F0E29700FFEF9F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				7659945623F0E28B00FFEF9F /* Launch */,
 				7659945923F0E34E00FFEF9F /* Main */,
 				7659945823F0E2A000FFEF9F /* Keychain */,
+				7659946123F0F43D00FFEF9F /* CoreData */,
+				7659946223F0F44B00FFEF9F /* UserDefaults */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -97,6 +110,24 @@
 				7659945C23F0E3C000FFEF9F /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		7659946123F0F43D00FFEF9F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7659946323F0F46400FFEF9F /* CoreData.storyboard */,
+				7659946523F0F49500FFEF9F /* CoreDataViewController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7659946223F0F44B00FFEF9F /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				7659946723F0F4A200FFEF9F /* UserDefaults.storyboard */,
+				7659946923F0F4AC00FFEF9F /* UserDefaultsViewController.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		76F206C223F0D36100648933 = {
@@ -120,10 +151,10 @@
 		76F206CD23F0D36100648933 /* StudyKeyword001 */ = {
 			isa = PBXGroup;
 			children = (
-				7659945723F0E29700FFEF9F /* Application */,
-				7659945623F0E28B00FFEF9F /* Launch */,
 				7659945523F0E27800FFEF9F /* Resource */,
 				7659945423F0E26900FFEF9F /* AppDelegate */,
+				7659945723F0E29700FFEF9F /* Application */,
+				7659949A23F154CB00FFEF9F /* StudyKeyword001.xcdatamodeld */,
 			);
 			path = StudyKeyword001;
 			sourceTree = "<group>";
@@ -205,6 +236,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7659946423F0F46400FFEF9F /* CoreData.storyboard in Resources */,
+				7659946823F0F4A200FFEF9F /* UserDefaults.storyboard in Resources */,
 				76F206DE23F0D36300648933 /* LaunchScreen.storyboard in Resources */,
 				76F206DB23F0D36300648933 /* Assets.xcassets in Resources */,
 				76F206D623F0D36100648933 /* Keychain.storyboard in Resources */,
@@ -262,8 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F206D323F0D36100648933 /* KeychainViewController.swift in Sources */,
+				7659949C23F154CB00FFEF9F /* StudyKeyword001.xcdatamodeld in Sources */,
+				7659946A23F0F4AC00FFEF9F /* UserDefaultsViewController.swift in Sources */,
 				76F206CF23F0D36100648933 /* AppDelegate.swift in Sources */,
 				76F206D123F0D36100648933 /* SceneDelegate.swift in Sources */,
+				7659946623F0F49500FFEF9F /* CoreDataViewController.swift in Sources */,
 				7659945D23F0E3C000FFEF9F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +502,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7659949A23F154CB00FFEF9F /* StudyKeyword001.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7659949B23F154CB00FFEF9F /* StudyKeyword001.xcdatamodel */,
+			);
+			currentVersion = 7659949B23F154CB00FFEF9F /* StudyKeyword001.xcdatamodel */;
+			path = StudyKeyword001.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 76F206C323F0D36100648933 /* Project object */;
 }
