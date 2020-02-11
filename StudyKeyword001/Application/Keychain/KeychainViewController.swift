@@ -19,26 +19,56 @@ class KeychainViewController: UIViewController {
     }
 
     @IBAction func savePasswordButtonTapped(_ sender: UIButton) {
-        if let password = passwordText.text {
-            let saveSuccessful: Bool = KeychainWrapper.standard.set(password, forKey: "userPassword")
-            print("Save was successful: \(saveSuccessful)")
-            self.view.endEditing(true)
-        }
+        
+        var result: String = self.passwordText.text ?? ""
+        
+        KeychainWrapper.standard.set(result, forKey: "userPassword")
+        
+        result += " was saved successful 😃"
+        print(result)
+        alert(title: "Success", message: result)
+        self.view.endEditing(true)
+        
         
     }
     
     @IBAction func retrievePasswordButtonTapped(_ sender: UIButton) {
         
+        var result: String = self.passwordText.text ?? ""
+        
         guard let retrievedPassword = KeychainWrapper.standard.string(forKey: "userPassword") else {
-            print("Password is nil")
+            result = result + " Password is nil"
+            print(result)
+            alert(title: "Alert", message: result)
             return
         }
-        print("Retrieved Password is: \(retrievedPassword)")
+        
+        result = "Retrieved Password is: \(retrievedPassword)"
+        
+        print(result)
+        alert(title: "Alert", message: result)
     }
     
     @IBAction func removePasswordButtonTapped(_ sender: UIButton) {
-        let removeSuccessful: Bool = KeychainWrapper.standard.remove(key: "userPassword")
-        print("Remove was successful: \(removeSuccessful)")
+        
+        var result: String = self.passwordText.text ?? ""
+        
+        KeychainWrapper.standard.remove(key: "userPassword")
+        
+        result += " was removed successful 😃"
+        print(result)
+        alert(title: "Success", message: result)
+    }
+    
+    private func alert(title: String = "", message: String = "") {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        
+        alert.addAction(action)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
     }
     
 }

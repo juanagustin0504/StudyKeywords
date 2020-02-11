@@ -18,13 +18,24 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        editUserName.text = UserDefaults.standard.string(forKey: "userName") ?? "Unknown User"
+        if let userName = UserDefaults.standard.string(forKey: "userName") {
+            editUserName.text = userName
+        } else {
+            editUserName.placeholder = "Unknown User"
+        }
+        
         notificationSwitch.isOn = UserDefaults.standard.bool(forKey: "switch")
     }
     
     @IBAction func saveData(_ sender: UIButton) {
-        UserDefaults.standard.set(editUserName.text, forKey: "userName")
+        if editUserName.text == "" {
+            UserDefaults.standard.set(nil, forKey: "userName")
+        } else {
+            UserDefaults.standard.set(editUserName.text, forKey: "userName")
+        }
+        
         UserDefaults.standard.set(notificationSwitch.isOn, forKey: "switch")
+        
         self.navigationController?.popViewController(animated: true)
     }
     
