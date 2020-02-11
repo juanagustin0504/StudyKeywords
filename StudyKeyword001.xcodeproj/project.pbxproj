@@ -14,6 +14,7 @@
 		7659946823F0F4A200FFEF9F /* UserDefaults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7659946723F0F4A200FFEF9F /* UserDefaults.storyboard */; };
 		7659946A23F0F4AC00FFEF9F /* UserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659946923F0F4AC00FFEF9F /* UserDefaultsViewController.swift */; };
 		7659949C23F154CB00FFEF9F /* StudyKeyword001.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7659949A23F154CB00FFEF9F /* StudyKeyword001.xcdatamodeld */; };
+		76D663DF23F2951B000F5DC5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D663DE23F2951B000F5DC5 /* SettingsViewController.swift */; };
 		76F206CF23F0D36100648933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206CE23F0D36100648933 /* AppDelegate.swift */; };
 		76F206D123F0D36100648933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D023F0D36100648933 /* SceneDelegate.swift */; };
 		76F206D323F0D36100648933 /* KeychainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F206D223F0D36100648933 /* KeychainViewController.swift */; };
@@ -32,6 +33,7 @@
 		7659946723F0F4A200FFEF9F /* UserDefaults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDefaults.storyboard; sourceTree = "<group>"; };
 		7659946923F0F4AC00FFEF9F /* UserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewController.swift; sourceTree = "<group>"; };
 		7659949B23F154CB00FFEF9F /* StudyKeyword001.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyKeyword001.xcdatamodel; sourceTree = "<group>"; };
+		76D663DE23F2951B000F5DC5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		76F206CB23F0D36100648933 /* StudyKeyword001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyKeyword001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F206CE23F0D36100648933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F206D023F0D36100648933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				7659946723F0F4A200FFEF9F /* UserDefaults.storyboard */,
 				7659946923F0F4AC00FFEF9F /* UserDefaultsViewController.swift */,
+				76D663DE23F2951B000F5DC5 /* SettingsViewController.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				76F206D123F0D36100648933 /* SceneDelegate.swift in Sources */,
 				7659946623F0F49500FFEF9F /* CoreDataViewController.swift in Sources */,
 				7659945D23F0E3C000FFEF9F /* MainViewController.swift in Sources */,
+				76D663DF23F2951B000F5DC5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
