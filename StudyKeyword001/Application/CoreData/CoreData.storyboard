@@ -15,13 +15,67 @@
                     <view key="view" contentMode="scaleToFill" id="k8j-ds-PHP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB2-aq-8VO">
+                                <rect key="frame" x="187.5" y="268.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cj-Kv-zb0">
+                                <rect key="frame" x="93.5" y="398.5" width="188" height="30"/>
+                                <state key="normal" title="Insert Object into CoreData"/>
+                                <connections>
+                                    <action selector="insertObjectButtonTapped:" destination="CUh-6w-x2g" eventType="touchUpInside" id="vyU-wS-fBC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter a String" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayG-Tl-1J6">
+                                <rect key="frame" x="50" y="184.5" width="275" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-w4-nOA">
+                                <rect key="frame" x="88" y="478.5" width="199" height="30"/>
+                                <state key="normal" title="Delete Object from CoreData"/>
+                                <connections>
+                                    <action selector="deleteObjectButtonTapped:" destination="CUh-6w-x2g" eventType="touchUpInside" id="aeO-1X-zNj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyL-ZH-28n">
+                                <rect key="frame" x="87.5" y="318.5" width="200" height="30"/>
+                                <state key="normal" title="Show Objects from CoreData"/>
+                                <connections>
+                                    <action selector="showObjectsButtonTapped:" destination="CUh-6w-x2g" eventType="touchUpInside" id="EuH-Yx-4zf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MB2-aq-8VO" firstAttribute="top" secondItem="ayG-Tl-1J6" secondAttribute="bottom" constant="50" id="3QZ-Rn-Da1"/>
+                            <constraint firstItem="DyL-ZH-28n" firstAttribute="centerX" secondItem="k8j-ds-PHP" secondAttribute="centerX" id="49x-yw-STB"/>
+                            <constraint firstItem="ayG-Tl-1J6" firstAttribute="leading" secondItem="nus-5Q-azg" secondAttribute="leading" constant="50" id="7U1-9y-Kxv"/>
+                            <constraint firstItem="DyL-ZH-28n" firstAttribute="centerY" secondItem="k8j-ds-PHP" secondAttribute="centerY" id="859-LX-wgS"/>
+                            <constraint firstItem="nus-5Q-azg" firstAttribute="trailing" secondItem="ayG-Tl-1J6" secondAttribute="trailing" constant="50" id="Lxy-Lk-y4i"/>
+                            <constraint firstItem="iPK-w4-nOA" firstAttribute="centerX" secondItem="k8j-ds-PHP" secondAttribute="centerX" id="RH3-Cw-b90"/>
+                            <constraint firstItem="iPK-w4-nOA" firstAttribute="top" secondItem="1Cj-Kv-zb0" secondAttribute="bottom" constant="50" id="UIn-mH-F1a"/>
+                            <constraint firstItem="1Cj-Kv-zb0" firstAttribute="centerX" secondItem="k8j-ds-PHP" secondAttribute="centerX" id="cd6-gh-cde"/>
+                            <constraint firstItem="DyL-ZH-28n" firstAttribute="top" secondItem="MB2-aq-8VO" secondAttribute="bottom" constant="50" id="fqL-Lv-lhB"/>
+                            <constraint firstItem="MB2-aq-8VO" firstAttribute="centerX" secondItem="k8j-ds-PHP" secondAttribute="centerX" id="lXV-ty-DXv"/>
+                            <constraint firstItem="1Cj-Kv-zb0" firstAttribute="top" secondItem="DyL-ZH-28n" secondAttribute="bottom" constant="50" id="m3E-s7-Bld"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nus-5Q-azg"/>
                     </view>
+                    <connections>
+                        <outlet property="deleteObjectBtn" destination="iPK-w4-nOA" id="nee-1C-UME"/>
+                        <outlet property="insertObjectBtn" destination="1Cj-Kv-zb0" id="sb6-oo-xd8"/>
+                        <outlet property="objectName" destination="ayG-Tl-1J6" id="BrG-x8-gyE"/>
+                        <outlet property="resultLb" destination="MB2-aq-8VO" id="qph-73-Mop"/>
+                        <outlet property="showObjectBtn" destination="DyL-ZH-28n" id="lh6-gf-YyO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYU-xM-sxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="88"/>
+            <point key="canvasLocation" x="138.40000000000001" y="87.706146926536732"/>
         </scene>
     </scenes>
 </document>
