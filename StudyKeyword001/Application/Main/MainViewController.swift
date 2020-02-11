@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     
     @IBAction func gotoUserDefaultsScreen(_ sender: UIButton) {
         let userdefaultsSb = UIStoryboard(name: "UserDefaults", bundle: nil)
-        let userdefaultsVc = userdefaultsSb.instantiateViewController(withIdentifier: "UserDefaultsViewControllr") as! UserDefaultsViewController
+        let userdefaultsVc = userdefaultsSb.instantiateViewController(withIdentifier: "UserDefaultsViewController") as! UserDefaultsViewController
         self.navigationController?.pushViewController(userdefaultsVc, animated: true)
     }
     

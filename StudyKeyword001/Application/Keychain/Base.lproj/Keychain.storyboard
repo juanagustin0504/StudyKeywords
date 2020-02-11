@@ -16,27 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-YY-n1I">
-                                <rect key="frame" x="20" y="184.5" width="335" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter a Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-YY-n1I">
+                                <rect key="frame" x="20" y="182.5" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-px-r8Y">
-                                <rect key="frame" x="94" y="318.5" width="187" height="30"/>
+                                <rect key="frame" x="77.5" y="316.5" width="220" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save Password to Keychain"/>
                                 <connections>
                                     <action selector="savePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGA-Nq-xnM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-vZ-he6">
-                                <rect key="frame" x="73.5" y="398.5" width="228" height="30"/>
+                                <rect key="frame" x="53" y="400.5" width="269" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Retrieve Password from Keychain"/>
                                 <connections>
                                     <action selector="retrievePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBq-dz-NTk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgo-x7-3Rz">
-                                <rect key="frame" x="74" y="478.5" width="227" height="30"/>
+                                <rect key="frame" x="53.5" y="484.5" width="268" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Remove Password from Keychain"/>
                                 <connections>
                                     <action selector="removePasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZh-7k-UaZ"/>
