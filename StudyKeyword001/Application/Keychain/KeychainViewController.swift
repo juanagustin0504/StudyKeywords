@@ -72,33 +72,39 @@ class KeychainViewController: UIViewController {
         alert(title: "Success", message: result)
         self.view.endEditing(true)
         
-        
     }
     
     @IBAction func retrievePasswordButtonTapped(_ sender: UIButton) {
         
-        var result: String = self.passwordText.text ?? ""
+        var result: String = ""
         
         guard let retrievedPassword = KeychainWrapper.standard.string(forKey: "userPassword") else {
-            result = result + " Password is nil"
+            result += "There is no saved password."
             print(result)
-            alert(title: "Alert", message: result)
+            alert(title: "Not Found", message: result)
             return
         }
         
         result = "Retrieved Password is: \(retrievedPassword)"
         
         print(result)
-        alert(title: "Alert", message: result)
+        alert(title: "Success", message: result)
     }
     
     @IBAction func removePasswordButtonTapped(_ sender: UIButton) {
         
-        var result: String = self.passwordText.text ?? ""
+        var result: String = ""
+        
+        guard let password = KeychainWrapper.standard.string(forKey: "userPassword") else {
+            result = "There is no saved password."
+            print(result)
+            alert(title: "Not Found", message: result)
+            return
+        }
         
         KeychainWrapper.standard.remove(key: "userPassword")
         
-        result += " was removed successful 😃"
+        result = password + " was removed successful 😃"
         print(result)
         alert(title: "Success", message: result)
     }

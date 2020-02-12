@@ -40,15 +40,23 @@
                                     <action selector="gotoUserDefaultsScreen:" destination="3fH-fO-cIh" eventType="touchUpInside" id="KuR-Wa-9rW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study to Keyword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-jK-mBz">
+                                <rect key="frame" x="95" y="94" width="185" height="28"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="esC-DX-Qgq" firstAttribute="centerX" secondItem="79L-Ud-46w" secondAttribute="centerX" id="22d-Io-16H"/>
+                            <constraint firstItem="PYk-bQ-y8K" firstAttribute="top" secondItem="U7b-jK-mBz" secondAttribute="bottom" constant="100" id="AhX-bH-Fm4"/>
                             <constraint firstItem="CTf-mT-0Ry" firstAttribute="centerX" secondItem="79L-Ud-46w" secondAttribute="centerX" id="GW3-wE-elF"/>
                             <constraint firstItem="esC-DX-Qgq" firstAttribute="top" secondItem="CTf-mT-0Ry" secondAttribute="bottom" constant="50" id="Nsz-Xt-dON"/>
                             <constraint firstItem="CTf-mT-0Ry" firstAttribute="top" secondItem="PYk-bQ-y8K" secondAttribute="bottom" constant="50" id="PCM-E4-ovL"/>
                             <constraint firstItem="CTf-mT-0Ry" firstAttribute="centerY" secondItem="79L-Ud-46w" secondAttribute="centerY" id="Tm6-ag-aGP"/>
                             <constraint firstItem="PYk-bQ-y8K" firstAttribute="centerX" secondItem="79L-Ud-46w" secondAttribute="centerX" id="Wpy-WA-GR5"/>
+                            <constraint firstItem="U7b-jK-mBz" firstAttribute="centerX" secondItem="79L-Ud-46w" secondAttribute="centerX" id="qhn-g3-Ruc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XwI-gY-8Ry"/>
                     </view>
