@@ -117,6 +117,14 @@ class CoreDataViewController: UIViewController {
     //MARK: - properties -
     private var objects: [String] = [String]()
     
+    private var managedContext: NSManagedObjectContext? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        
+        return appDelegate.persistentContainer.viewContext
+    }
+    
     //MARK: - life cycle -
     override func viewDidLoad() {
         self.objectName.delegate = self
@@ -134,6 +142,11 @@ class CoreDataViewController: UIViewController {
             return
         }
         
+        if result.isEmpty {
+            alert(title: "Empty", message: "CoreData is Empty")
+            return
+        }
+        
         var index = 0
         for element in result {
             guard let name = element.value(forKey: "name") else {
@@ -143,7 +156,7 @@ class CoreDataViewController: UIViewController {
             self.objects.insert(name as! String, at: index)
             
             print("object(\(index)) = \(name)")
-            index -= -1
+            index -= -1 // XD
         }
         
         var msg = ""
@@ -171,14 +184,6 @@ class CoreDataViewController: UIViewController {
     }
     
     //MARK: - custom method -
-    private var managedContext: NSManagedObjectContext? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return nil
-        }
-        
-        return appDelegate.persistentContainer.viewContext
-    }
-    
     private func saveData() -> Bool {
         
         guard let managedContext = managedContext else {
@@ -196,12 +201,12 @@ class CoreDataViewController: UIViewController {
         return false
     }
     
-    private func fetchData(_ objectName: String) -> [NSManagedObject]? {
+    private func fetchData(_ entityName: String) -> [NSManagedObject]? {
         guard let managedContext = managedContext else {
             return nil
         }
         
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: objectName)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
         
         do {
             let result = try managedContext.fetch(fetchRequest)
@@ -213,7 +218,7 @@ class CoreDataViewController: UIViewController {
         return nil
     }
     
-    private func insertData(_ objectName: String) {
+    private func insertData(_ nameValue: String) {
         guard let managedContext = managedContext else {
             return
         }
@@ -224,7 +229,7 @@ class CoreDataViewController: UIViewController {
         }
         
         let object = NSManagedObject(entity: entity, insertInto: managedContext)
-        object.setValue(objectName, forKey: "name")
+        object.setValue(nameValue, forKey: "name")
         
         print("insert data was successful 😃")
         
@@ -233,7 +238,7 @@ class CoreDataViewController: UIViewController {
         }
     }
     
-    private func deleteObject(_ objectName: String) {
+    private func deleteObject(_ nameValue: String) {
         guard let managedContext = managedContext else {
             return
         }
@@ -246,16 +251,15 @@ class CoreDataViewController: UIViewController {
         }
         
         for element in result {
-            if element.value(forKey: "name") as! String == objectName {
+            if element.value(forKey: "name") as! String == nameValue {
                 managedContext.delete(element)
             }
         }
         
-        print("\(objectName) was deleted successful 😃")
+        print("\(nameValue) was deleted successful 😃")
         guard saveData() else {
             return
         }
-        
     }
     
 }

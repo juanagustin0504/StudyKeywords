@@ -109,7 +109,11 @@ class KeychainViewController: UIViewController {
         alert(title: "Success", message: result)
     }
     
-    private func alert(title: String = "", message: String = "") {
+    
+}
+
+extension UIViewController {
+    func alert(title: String = "", message: String = "") {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel)
         
@@ -119,5 +123,4 @@ class KeychainViewController: UIViewController {
             self.present(alert, animated: true)
         }
     }
-    
 }

@@ -67,12 +67,7 @@ class UserDefaultsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if UserDefaults.standard.string(forKey: "userName") == "", UserDefaults.standard.string(forKey: "userName") == nil {
-            userNameLb.text = "Unknown User"
-        } else {
-            userNameLb.text = UserDefaults.standard.string(forKey: "userName") ?? "Unknown User"
-        }
-        
+        userNameLb.text = UserDefaults.standard.string(forKey: "userName") ?? "Unknown User"
     }
 
     @IBAction func gotoSettingsScreen(_ sender: UIButton) {
